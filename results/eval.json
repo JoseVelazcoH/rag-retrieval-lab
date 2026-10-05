@@ -1,0 +1,3379 @@
+{
+  "query_count": 80,
+  "queries_file": "queries-blind.json",
+  "modes": {
+    "bm25": {
+      "recall@1": 0.7625,
+      "recall@3": 0.9125,
+      "mrr": 0.8389583333333333,
+      "hits@1": 61,
+      "hits@3": 73,
+      "recall@3_ci95": [
+        0.85,
+        0.9625
+      ],
+      "queries": [
+        {
+          "id": "symptom-pushed-secret",
+          "kind": "symptom",
+          "query": "I accidentally committed a service credential to a repo, what now?",
+          "expected_file": "auth/api-keys.md",
+          "top_files": [
+            "auth/api-keys.md",
+            "guides/glossary.md",
+            "runbooks/disk-full.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-github-token-expiry",
+          "kind": "keyword",
+          "query": "github personal token expiration",
+          "expected_file": "auth/api-keys.md",
+          "top_files": [
+            "auth/api-keys.md",
+            "auth/jwt.md",
+            "runbooks/payment-gateway.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-kicked-out-minutes",
+          "kind": "symptom",
+          "query": "users get kicked out after a few minutes and the API says unauthorized",
+          "expected_file": "auth/jwt.md",
+          "top_files": [
+            "auth/jwt.md",
+            "runbooks/redis-memory.md",
+            "runbooks/kubernetes-pod-restarts.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-auth-refresh",
+          "kind": "keyword",
+          "query": "POST /auth/refresh",
+          "expected_file": "auth/jwt.md",
+          "top_files": [
+            "auth/jwt.md",
+            "auth/key-rotation.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-jwks",
+          "kind": "keyword",
+          "query": "JWKS",
+          "expected_file": "auth/key-rotation.md",
+          "top_files": [
+            "auth/key-rotation.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-leaked-private-key",
+          "kind": "question",
+          "query": "what do we do if a signing private key leaks?",
+          "expected_file": "auth/key-rotation.md",
+          "top_files": [
+            "auth/key-rotation.md",
+            "security/phishing.md",
+            "deploys/rollback.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-new-phone-codes",
+          "kind": "symptom",
+          "query": "got a new phone and can't get my login codes",
+          "expected_file": "auth/mfa.md",
+          "top_files": [
+            "runbooks/kubernetes-pod-restarts.md",
+            "auth/mfa.md",
+            "hr/onboarding.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "question-sms-second-factor",
+          "kind": "question",
+          "query": "can I use text messages as my second factor?",
+          "expected_file": "auth/mfa.md",
+          "top_files": [
+            "auth/mfa.md",
+            "runbooks/log-rotation.md",
+            "security/vpn.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-redirect-uri-mismatch",
+          "kind": "keyword",
+          "query": "redirect_uri_mismatch",
+          "expected_file": "auth/oauth-google.md",
+          "top_files": [
+            "auth/oauth-google.md",
+            "runbooks/payment-gateway.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-google-login-url-rejected",
+          "kind": "symptom",
+          "query": "google login for an internal app says my app address isn't allowed",
+          "expected_file": "auth/oauth-google.md",
+          "top_files": [
+            "auth/oauth-google.md",
+            "runbooks/dns.md",
+            "runbooks/redis-memory.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-too-many-wrong-passwords",
+          "kind": "symptom",
+          "query": "I typed my password wrong too many times and now I can't try again",
+          "expected_file": "auth/password-recovery.md",
+          "top_files": [
+            "runbooks/postgres-connections.md",
+            "auth/jwt.md",
+            "auth/password-recovery.md"
+          ],
+          "rank": 3,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "question-reset-link-validity",
+          "kind": "question",
+          "query": "how long does the password reset link last?",
+          "expected_file": "auth/password-recovery.md",
+          "top_files": [
+            "auth/password-recovery.md",
+            "runbooks/postgres-backups.md",
+            "security/phishing.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-temporary-admin",
+          "kind": "question",
+          "query": "how do I get temporary admin access for a one-off task?",
+          "expected_file": "auth/rbac-roles.md",
+          "top_files": [
+            "auth/rbac-roles.md",
+            "guides/on-call.md",
+            "runbooks/kubernetes-pod-restarts.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-need-more-access",
+          "kind": "symptom",
+          "query": "I need to change settings in a service but I only have read access, how do I get more?",
+          "expected_file": "auth/rbac-roles.md",
+          "top_files": [
+            "security/phishing.md",
+            "runbooks/kubernetes-pod-restarts.md",
+            "auth/rbac-roles.md"
+          ],
+          "rank": 3,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-random-test-failures",
+          "kind": "symptom",
+          "query": "one test fails randomly every few runs and nobody knows why",
+          "expected_file": "deploys/ci-pipeline.md",
+          "top_files": [
+            "guides/observability.md",
+            "deploys/ci-pipeline.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "question-merge-to-production",
+          "kind": "question",
+          "query": "how does a change get to production after it is merged?",
+          "expected_file": "deploys/deploy-process.md",
+          "top_files": [
+            "deploys/deploy-process.md",
+            "deploys/freeze-windows.md",
+            "runbooks/kubernetes-pod-restarts.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-progressive-rollout",
+          "kind": "keyword",
+          "query": "progressive rollout 5% 25% 100%",
+          "expected_file": "deploys/deploy-process.md",
+          "top_files": [
+            "deploys/deploy-process.md",
+            "hr/medical-leave.md",
+            "deploys/feature-flags.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-ship-hidden-work",
+          "kind": "symptom",
+          "query": "how do we ship unfinished work without users seeing it?",
+          "expected_file": "deploys/feature-flags.md",
+          "top_files": [
+            "hr/remote-work.md",
+            "security/phishing.md",
+            "hr/expenses-reimbursements.md"
+          ],
+          "rank": null,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "question-friday-deploy",
+          "kind": "question",
+          "query": "can I push to production on a Friday evening?",
+          "expected_file": "deploys/freeze-windows.md",
+          "top_files": [
+            "hr/onboarding.md",
+            "deploys/deploy-process.md",
+            "deploys/freeze-windows.md"
+          ],
+          "rank": 3,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-december-close",
+          "kind": "keyword",
+          "query": "December accounting close",
+          "expected_file": "deploys/freeze-windows.md",
+          "top_files": [
+            "deploys/freeze-windows.md",
+            "hr/performance-reviews.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-bad-release-payments",
+          "kind": "symptom",
+          "query": "I released a bad version and checkout stopped working, how do I go back?",
+          "expected_file": "deploys/rollback.md",
+          "top_files": [
+            "deploys/rollback.md",
+            "runbooks/refund-errors.md",
+            "security/phishing.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-revert-migrations",
+          "kind": "keyword",
+          "query": "rollback database migrations",
+          "expected_file": "deploys/rollback.md",
+          "top_files": [
+            "deploys/rollback.md",
+            "deploys/deploy-process.md",
+            "runbooks/postgres-backups.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-bump-major-version",
+          "kind": "question",
+          "query": "when do I bump the major version number?",
+          "expected_file": "deploys/versioning.md",
+          "top_files": [
+            "deploys/versioning.md",
+            "security/phishing.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-ruff-prettier",
+          "kind": "keyword",
+          "query": "ruff prettier formatter",
+          "expected_file": "guides/code-style.md",
+          "top_files": [
+            "guides/code-style.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-premium-first-response",
+          "kind": "question",
+          "query": "how fast must we first reply to premium customers?",
+          "expected_file": "guides/customer-support.md",
+          "top_files": [
+            "guides/customer-support.md",
+            "deploys/rollback.md",
+            "security/incidents.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-wal-meaning",
+          "kind": "question",
+          "query": "what does WAL stand for?",
+          "expected_file": "guides/glossary.md",
+          "top_files": [
+            "auth/oauth-google.md",
+            "runbooks/postgres-backups.md",
+            "guides/glossary.md"
+          ],
+          "rank": 3,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-rpo-rto",
+          "kind": "keyword",
+          "query": "RPO RTO definition",
+          "expected_file": "guides/glossary.md",
+          "top_files": [
+            "guides/glossary.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-meeting-no-agenda",
+          "kind": "question",
+          "query": "what happens if a meeting has no agenda?",
+          "expected_file": "guides/meetings.md",
+          "top_files": [
+            "guides/meetings.md",
+            "guides/on-call.md",
+            "auth/password-recovery.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-request-id-tracing",
+          "kind": "keyword",
+          "query": "request_id trace across services",
+          "expected_file": "guides/observability.md",
+          "top_files": [
+            "guides/observability.md",
+            "runbooks/dns.md",
+            "runbooks/disk-full.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-four-minimum-signals",
+          "kind": "question",
+          "query": "what are the minimum signals every service should expose?",
+          "expected_file": "guides/observability.md",
+          "top_files": [
+            "guides/observability.md",
+            "auth/api-keys.md",
+            "runbooks/disk-full.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-oncall-days-off",
+          "kind": "question",
+          "query": "how many days off do I get for being on call?",
+          "expected_file": "guides/on-call.md",
+          "top_files": [
+            "guides/on-call.md",
+            "runbooks/rabbitmq-queues.md",
+            "runbooks/kubernetes-pod-restarts.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-oncall-cant-fix",
+          "kind": "symptom",
+          "query": "I am on call and can't fix this alert, who do I ask for help?",
+          "expected_file": "guides/on-call.md",
+          "top_files": [
+            "auth/mfa.md",
+            "guides/observability.md",
+            "deploys/rollback.md"
+          ],
+          "rank": 4,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "question-postmortem-deadline",
+          "kind": "question",
+          "query": "how soon after a sev 1 do we need to write the postmortem?",
+          "expected_file": "guides/postmortems.md",
+          "top_files": [
+            "runbooks/log-rotation.md",
+            "auth/password-recovery.md",
+            "guides/postmortems.md"
+          ],
+          "rank": 3,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-outdated-wiki-page",
+          "kind": "symptom",
+          "query": "a wiki page looks stale and wrong, who should I tell?",
+          "expected_file": "guides/wiki-conventions.md",
+          "top_files": [
+            "guides/wiki-conventions.md",
+            "deploys/ci-pipeline.md",
+            "hr/equipment.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-dead-work-computer",
+          "kind": "symptom",
+          "query": "my work computer died, how long until I get another one?",
+          "expected_file": "hr/equipment.md",
+          "top_files": [
+            "hr/remote-work.md",
+            "runbooks/kubernetes-pod-restarts.md",
+            "runbooks/subscription-billing.md"
+          ],
+          "rank": null,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "question-client-lunch-payback",
+          "kind": "question",
+          "query": "how long until I get paid back for a client lunch?",
+          "expected_file": "hr/expenses-reimbursements.md",
+          "top_files": [
+            "runbooks/kubernetes-pod-restarts.md",
+            "runbooks/postgres-backups.md",
+            "hr/medical-leave.md"
+          ],
+          "rank": null,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "keyword-expense-invoice",
+          "kind": "keyword",
+          "query": "expense reimbursement invoice",
+          "expected_file": "hr/expenses-reimbursements.md",
+          "top_files": [
+            "hr/expenses-reimbursements.md",
+            "runbooks/rabbitmq-queues.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-woke-up-sick",
+          "kind": "symptom",
+          "query": "I woke up sick, who do I tell and by when?",
+          "expected_file": "hr/medical-leave.md",
+          "top_files": [
+            "hr/medical-leave.md",
+            "security/phishing.md",
+            "runbooks/rabbitmq-queues.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-doctor-note-three-days",
+          "kind": "question",
+          "query": "do I need a doctor's note for three days off?",
+          "expected_file": "hr/medical-leave.md",
+          "top_files": [
+            "auth/rbac-roles.md",
+            "hr/remote-work.md",
+            "guides/on-call.md"
+          ],
+          "rank": 4,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "symptom-first-week-todo",
+          "kind": "symptom",
+          "query": "it is my first week and I don't know what I have to finish",
+          "expected_file": "hr/onboarding.md",
+          "top_files": [
+            "hr/onboarding.md",
+            "deploys/ci-pipeline.md",
+            "guides/on-call.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-30-day-goals-buddy",
+          "kind": "keyword",
+          "query": "30-day goals buddy",
+          "expected_file": "hr/onboarding.md",
+          "top_files": [
+            "hr/onboarding.md",
+            "runbooks/tls-certificates.md",
+            "hr/equipment.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-raises-timing",
+          "kind": "question",
+          "query": "when are raises decided?",
+          "expected_file": "hr/performance-reviews.md",
+          "top_files": [
+            "hr/performance-reviews.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-work-abroad",
+          "kind": "question",
+          "query": "can I work from another country for a month?",
+          "expected_file": "hr/remote-work.md",
+          "top_files": [
+            "hr/remote-work.md",
+            "hr/onboarding.md",
+            "hr/expenses-reimbursements.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-home-internet-cost",
+          "kind": "symptom",
+          "query": "does the company help pay for my home internet?",
+          "expected_file": "hr/remote-work.md",
+          "top_files": [
+            "security/incidents.md",
+            "hr/equipment.md",
+            "hr/medical-leave.md"
+          ],
+          "rank": 5,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "question-first-year-vacation",
+          "kind": "question",
+          "query": "how many vacation days do I get in my first year?",
+          "expected_file": "hr/vacation.md",
+          "top_files": [
+            "hr/vacation.md",
+            "hr/medical-leave.md",
+            "runbooks/rabbitmq-queues.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-unused-days-lost",
+          "kind": "symptom",
+          "query": "I didn't use all my days last year, will I lose them?",
+          "expected_file": "hr/vacation.md",
+          "top_files": [
+            "hr/equipment.md",
+            "hr/vacation.md",
+            "runbooks/log-rotation.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-diskusagehigh",
+          "kind": "keyword",
+          "query": "DiskUsageHigh",
+          "expected_file": "runbooks/disk-full.md",
+          "top_files": [
+            "runbooks/disk-full.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-storage-maxed-services",
+          "kind": "symptom",
+          "query": "server stopped writing files and several services are erroring, storage almost at the limit",
+          "expected_file": "runbooks/disk-full.md",
+          "top_files": [
+            "runbooks/log-rotation.md",
+            "runbooks/disk-full.md",
+            "auth/jwt.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-pods-cant-resolve",
+          "kind": "symptom",
+          "query": "pods can't look up internal service names",
+          "expected_file": "runbooks/dns.md",
+          "top_files": [
+            "runbooks/dns.md",
+            "runbooks/kubernetes-pod-restarts.md",
+            "guides/glossary.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-dig-trace",
+          "kind": "keyword",
+          "query": "dig +trace",
+          "expected_file": "runbooks/dns.md",
+          "top_files": [
+            "runbooks/dns.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-py-spy",
+          "kind": "keyword",
+          "query": "py-spy dump",
+          "expected_file": "runbooks/high-cpu.md",
+          "top_files": [
+            "runbooks/high-cpu.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-servers-pegged",
+          "kind": "symptom",
+          "query": "app servers are pegged and everything is slow",
+          "expected_file": "runbooks/high-cpu.md",
+          "top_files": [
+            "runbooks/high-cpu.md",
+            "runbooks/nginx.md",
+            "runbooks/kubernetes-pod-restarts.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-crashloopbackoff",
+          "kind": "keyword",
+          "query": "CrashLoopBackOff",
+          "expected_file": "runbooks/kubernetes-pod-restarts.md",
+          "top_files": [
+            "runbooks/kubernetes-pod-restarts.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-container-out-of-memory",
+          "kind": "symptom",
+          "query": "my container keeps getting killed because it runs out of memory",
+          "expected_file": "runbooks/kubernetes-pod-restarts.md",
+          "top_files": [
+            "runbooks/redis-memory.md",
+            "runbooks/kubernetes-pod-restarts.md",
+            "runbooks/postgres-connections.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-logrotate-retention",
+          "kind": "keyword",
+          "query": "logrotate retention",
+          "expected_file": "runbooks/log-rotation.md",
+          "top_files": [
+            "runbooks/log-rotation.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-docker-log-size",
+          "kind": "question",
+          "query": "how big can docker container logs get before they rotate?",
+          "expected_file": "runbooks/log-rotation.md",
+          "top_files": [
+            "runbooks/log-rotation.md",
+            "runbooks/disk-full.md",
+            "runbooks/kubernetes-pod-restarts.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-big-upload-rejected",
+          "kind": "symptom",
+          "query": "users can't upload a 30 MB document, it gets rejected",
+          "expected_file": "runbooks/nginx.md",
+          "top_files": [
+            "runbooks/nginx.md",
+            "hr/expenses-reimbursements.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-proxy-config-live",
+          "kind": "symptom",
+          "query": "I changed a proxy config and need it live without kicking users off",
+          "expected_file": "runbooks/nginx.md",
+          "top_files": [
+            "auth/rbac-roles.md",
+            "runbooks/nginx.md",
+            "guides/on-call.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-err-4021",
+          "kind": "keyword",
+          "query": "ERR_4021",
+          "expected_file": "runbooks/payment-gateway.md",
+          "top_files": [
+            "runbooks/payment-gateway.md",
+            "runbooks/refund-errors.md",
+            "runbooks/subscription-billing.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-gateway-timeout-retry",
+          "kind": "question",
+          "query": "should I retry a charge automatically if the gateway does not answer?",
+          "expected_file": "runbooks/payment-gateway.md",
+          "top_files": [
+            "runbooks/payment-gateway.md",
+            "runbooks/refund-errors.md",
+            "runbooks/subscription-billing.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-restore-duration",
+          "kind": "question",
+          "query": "how long did the last full database restore take?",
+          "expected_file": "runbooks/postgres-backups.md",
+          "top_files": [
+            "runbooks/postgres-backups.md",
+            "deploys/rollback.md",
+            "runbooks/disk-full.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-backup-crashed",
+          "kind": "symptom",
+          "query": "last night's database backup crashed, where do I look?",
+          "expected_file": "runbooks/postgres-backups.md",
+          "top_files": [
+            "runbooks/postgres-backups.md",
+            "runbooks/kubernetes-pod-restarts.md",
+            "auth/mfa.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-idle-in-transaction",
+          "kind": "keyword",
+          "query": "idle in transaction",
+          "expected_file": "runbooks/postgres-connections.md",
+          "top_files": [
+            "runbooks/postgres-connections.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-too-many-clients",
+          "kind": "symptom",
+          "query": "database says too many clients and the app can't connect",
+          "expected_file": "runbooks/postgres-connections.md",
+          "top_files": [
+            "runbooks/postgres-connections.md",
+            "hr/expenses-reimbursements.md",
+            "security/vpn.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-invoice-emails-late",
+          "kind": "symptom",
+          "query": "invoice emails are arriving hours late",
+          "expected_file": "runbooks/rabbitmq-queues.md",
+          "top_files": [
+            "runbooks/rabbitmq-queues.md",
+            "hr/expenses-reimbursements.md",
+            "security/incidents.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-invoices-dlq",
+          "kind": "keyword",
+          "query": "invoices.dlq",
+          "expected_file": "runbooks/rabbitmq-queues.md",
+          "top_files": [
+            "runbooks/rabbitmq-queues.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-flushall",
+          "kind": "keyword",
+          "query": "FLUSHALL production",
+          "expected_file": "runbooks/redis-memory.md",
+          "top_files": [
+            "runbooks/redis-memory.md",
+            "deploys/deploy-process.md",
+            "deploys/freeze-windows.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-sessions-closing-writes-rejected",
+          "kind": "symptom",
+          "query": "user sessions keep getting closed and the cache rejects writes",
+          "expected_file": "runbooks/redis-memory.md",
+          "top_files": [
+            "runbooks/redis-memory.md",
+            "runbooks/kubernetes-pod-restarts.md",
+            "deploys/ci-pipeline.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-refund-eight-months",
+          "kind": "question",
+          "query": "a customer asks for a refund after eight months, what do we do?",
+          "expected_file": "runbooks/refund-errors.md",
+          "top_files": [
+            "deploys/freeze-windows.md",
+            "runbooks/refund-errors.md",
+            "security/phishing.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-err-4201",
+          "kind": "keyword",
+          "query": "ERR_4201",
+          "expected_file": "runbooks/refund-errors.md",
+          "top_files": [
+            "runbooks/refund-errors.md",
+            "runbooks/payment-gateway.md",
+            "runbooks/subscription-billing.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-err-4210",
+          "kind": "keyword",
+          "query": "ERR_4210",
+          "expected_file": "runbooks/subscription-billing.md",
+          "top_files": [
+            "runbooks/subscription-billing.md",
+            "runbooks/refund-errors.md",
+            "runbooks/payment-gateway.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-plan-renewals-failing",
+          "kind": "symptom",
+          "query": "renewals fail for every customer on one plan",
+          "expected_file": "runbooks/subscription-billing.md",
+          "top_files": [
+            "runbooks/subscription-billing.md",
+            "guides/customer-support.md",
+            "security/incidents.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-not-secure-warning",
+          "kind": "symptom",
+          "query": "browser shows a not secure warning on our site",
+          "expected_file": "runbooks/tls-certificates.md",
+          "top_files": [
+            "runbooks/tls-certificates.md",
+            "runbooks/payment-gateway.md",
+            "runbooks/nginx.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-certbot-force",
+          "kind": "keyword",
+          "query": "certbot force-renewal",
+          "expected_file": "runbooks/tls-certificates.md",
+          "top_files": [
+            "runbooks/tls-certificates.md",
+            "hr/medical-leave.md",
+            "auth/jwt.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-customer-data-leak-notify",
+          "kind": "question",
+          "query": "who do we notify and when after a customer data leak?",
+          "expected_file": "security/incidents.md",
+          "top_files": [
+            "security/incidents.md",
+            "deploys/freeze-windows.md",
+            "guides/glossary.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-send-password-email",
+          "kind": "question",
+          "query": "am I allowed to email a password to a coworker?",
+          "expected_file": "security/password-policy.md",
+          "top_files": [
+            "security/password-policy.md",
+            "auth/password-recovery.md",
+            "runbooks/redis-memory.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-clicked-weird-link",
+          "kind": "symptom",
+          "query": "I clicked a weird link in an email, what do I do?",
+          "expected_file": "security/phishing.md",
+          "top_files": [
+            "security/phishing.md",
+            "deploys/rollback.md",
+            "runbooks/subscription-billing.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-report-phishing",
+          "kind": "keyword",
+          "query": "report suspicious email",
+          "expected_file": "security/phishing.md",
+          "top_files": [
+            "runbooks/redis-memory.md",
+            "auth/password-recovery.md",
+            "hr/onboarding.md"
+          ],
+          "rank": 4,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "symptom-vpn-no-internal-names",
+          "kind": "symptom",
+          "query": "vpn connects but I can't reach internal hostnames",
+          "expected_file": "security/vpn.md",
+          "top_files": [
+            "security/vpn.md",
+            "hr/remote-work.md",
+            "runbooks/dns.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-vpn-ticket-info",
+          "kind": "question",
+          "query": "what should I include in a ticket when the VPN client fails?",
+          "expected_file": "security/vpn.md",
+          "top_files": [
+            "security/vpn.md",
+            "deploys/ci-pipeline.md",
+            "guides/customer-support.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        }
+      ]
+    },
+    "vector": {
+      "recall@1": 0.8875,
+      "recall@3": 0.925,
+      "mrr": 0.9096180555555555,
+      "hits@1": 71,
+      "hits@3": 74,
+      "recall@3_ci95": [
+        0.8625,
+        0.975
+      ],
+      "queries": [
+        {
+          "id": "symptom-pushed-secret",
+          "kind": "symptom",
+          "query": "I accidentally committed a service credential to a repo, what now?",
+          "expected_file": "auth/api-keys.md",
+          "top_files": [
+            "runbooks/payment-gateway.md",
+            "auth/password-recovery.md",
+            "security/phishing.md"
+          ],
+          "rank": 8,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "keyword-github-token-expiry",
+          "kind": "keyword",
+          "query": "github personal token expiration",
+          "expected_file": "auth/api-keys.md",
+          "top_files": [
+            "auth/api-keys.md",
+            "auth/jwt.md",
+            "auth/password-recovery.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-kicked-out-minutes",
+          "kind": "symptom",
+          "query": "users get kicked out after a few minutes and the API says unauthorized",
+          "expected_file": "auth/jwt.md",
+          "top_files": [
+            "auth/jwt.md",
+            "runbooks/payment-gateway.md",
+            "auth/password-recovery.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-auth-refresh",
+          "kind": "keyword",
+          "query": "POST /auth/refresh",
+          "expected_file": "auth/jwt.md",
+          "top_files": [
+            "auth/jwt.md",
+            "auth/password-recovery.md",
+            "deploys/rollback.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-jwks",
+          "kind": "keyword",
+          "query": "JWKS",
+          "expected_file": "auth/key-rotation.md",
+          "top_files": [
+            "auth/key-rotation.md",
+            "auth/jwt.md",
+            "runbooks/log-rotation.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-leaked-private-key",
+          "kind": "question",
+          "query": "what do we do if a signing private key leaks?",
+          "expected_file": "auth/key-rotation.md",
+          "top_files": [
+            "auth/key-rotation.md",
+            "runbooks/payment-gateway.md",
+            "security/phishing.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-new-phone-codes",
+          "kind": "symptom",
+          "query": "got a new phone and can't get my login codes",
+          "expected_file": "auth/mfa.md",
+          "top_files": [
+            "auth/mfa.md",
+            "auth/password-recovery.md",
+            "guides/customer-support.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-sms-second-factor",
+          "kind": "question",
+          "query": "can I use text messages as my second factor?",
+          "expected_file": "auth/mfa.md",
+          "top_files": [
+            "auth/mfa.md",
+            "hr/onboarding.md",
+            "auth/api-keys.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-redirect-uri-mismatch",
+          "kind": "keyword",
+          "query": "redirect_uri_mismatch",
+          "expected_file": "auth/oauth-google.md",
+          "top_files": [
+            "auth/oauth-google.md",
+            "auth/jwt.md",
+            "security/phishing.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-google-login-url-rejected",
+          "kind": "symptom",
+          "query": "google login for an internal app says my app address isn't allowed",
+          "expected_file": "auth/oauth-google.md",
+          "top_files": [
+            "auth/oauth-google.md",
+            "auth/mfa.md",
+            "auth/password-recovery.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-too-many-wrong-passwords",
+          "kind": "symptom",
+          "query": "I typed my password wrong too many times and now I can't try again",
+          "expected_file": "auth/password-recovery.md",
+          "top_files": [
+            "auth/password-recovery.md",
+            "runbooks/payment-gateway.md",
+            "security/password-policy.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-reset-link-validity",
+          "kind": "question",
+          "query": "how long does the password reset link last?",
+          "expected_file": "auth/password-recovery.md",
+          "top_files": [
+            "auth/password-recovery.md",
+            "security/password-policy.md",
+            "auth/jwt.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-temporary-admin",
+          "kind": "question",
+          "query": "how do I get temporary admin access for a one-off task?",
+          "expected_file": "auth/rbac-roles.md",
+          "top_files": [
+            "auth/rbac-roles.md",
+            "runbooks/redis-memory.md",
+            "auth/password-recovery.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-need-more-access",
+          "kind": "symptom",
+          "query": "I need to change settings in a service but I only have read access, how do I get more?",
+          "expected_file": "auth/rbac-roles.md",
+          "top_files": [
+            "runbooks/nginx.md",
+            "security/password-policy.md",
+            "hr/onboarding.md"
+          ],
+          "rank": 5,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "symptom-random-test-failures",
+          "kind": "symptom",
+          "query": "one test fails randomly every few runs and nobody knows why",
+          "expected_file": "deploys/ci-pipeline.md",
+          "top_files": [
+            "deploys/ci-pipeline.md",
+            "runbooks/rabbitmq-queues.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-merge-to-production",
+          "kind": "question",
+          "query": "how does a change get to production after it is merged?",
+          "expected_file": "deploys/deploy-process.md",
+          "top_files": [
+            "deploys/deploy-process.md",
+            "deploys/versioning.md",
+            "deploys/rollback.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-progressive-rollout",
+          "kind": "keyword",
+          "query": "progressive rollout 5% 25% 100%",
+          "expected_file": "deploys/deploy-process.md",
+          "top_files": [
+            "deploys/deploy-process.md",
+            "deploys/rollback.md",
+            "runbooks/disk-full.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-ship-hidden-work",
+          "kind": "symptom",
+          "query": "how do we ship unfinished work without users seeing it?",
+          "expected_file": "deploys/feature-flags.md",
+          "top_files": [
+            "deploys/rollback.md",
+            "guides/wiki-conventions.md",
+            "runbooks/log-rotation.md"
+          ],
+          "rank": 9,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "question-friday-deploy",
+          "kind": "question",
+          "query": "can I push to production on a Friday evening?",
+          "expected_file": "deploys/freeze-windows.md",
+          "top_files": [
+            "deploys/freeze-windows.md",
+            "deploys/deploy-process.md",
+            "hr/onboarding.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-december-close",
+          "kind": "keyword",
+          "query": "December accounting close",
+          "expected_file": "deploys/freeze-windows.md",
+          "top_files": [
+            "deploys/freeze-windows.md",
+            "hr/performance-reviews.md",
+            "guides/customer-support.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-bad-release-payments",
+          "kind": "symptom",
+          "query": "I released a bad version and checkout stopped working, how do I go back?",
+          "expected_file": "deploys/rollback.md",
+          "top_files": [
+            "runbooks/refund-errors.md",
+            "deploys/rollback.md",
+            "runbooks/postgres-backups.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-revert-migrations",
+          "kind": "keyword",
+          "query": "rollback database migrations",
+          "expected_file": "deploys/rollback.md",
+          "top_files": [
+            "deploys/rollback.md",
+            "runbooks/postgres-backups.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-bump-major-version",
+          "kind": "question",
+          "query": "when do I bump the major version number?",
+          "expected_file": "deploys/versioning.md",
+          "top_files": [
+            "deploys/versioning.md",
+            "deploys/rollback.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-ruff-prettier",
+          "kind": "keyword",
+          "query": "ruff prettier formatter",
+          "expected_file": "guides/code-style.md",
+          "top_files": [
+            "guides/code-style.md",
+            "runbooks/disk-full.md",
+            "runbooks/redis-memory.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-premium-first-response",
+          "kind": "question",
+          "query": "how fast must we first reply to premium customers?",
+          "expected_file": "guides/customer-support.md",
+          "top_files": [
+            "guides/customer-support.md",
+            "runbooks/payment-gateway.md",
+            "runbooks/rabbitmq-queues.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-wal-meaning",
+          "kind": "question",
+          "query": "what does WAL stand for?",
+          "expected_file": "guides/glossary.md",
+          "top_files": [
+            "guides/glossary.md",
+            "runbooks/postgres-backups.md",
+            "guides/wiki-conventions.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-rpo-rto",
+          "kind": "keyword",
+          "query": "RPO RTO definition",
+          "expected_file": "guides/glossary.md",
+          "top_files": [
+            "guides/glossary.md",
+            "deploys/deploy-process.md",
+            "runbooks/log-rotation.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-meeting-no-agenda",
+          "kind": "question",
+          "query": "what happens if a meeting has no agenda?",
+          "expected_file": "guides/meetings.md",
+          "top_files": [
+            "guides/meetings.md",
+            "security/incidents.md",
+            "guides/customer-support.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-request-id-tracing",
+          "kind": "keyword",
+          "query": "request_id trace across services",
+          "expected_file": "guides/observability.md",
+          "top_files": [
+            "guides/observability.md",
+            "security/phishing.md",
+            "auth/api-keys.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-four-minimum-signals",
+          "kind": "question",
+          "query": "what are the minimum signals every service should expose?",
+          "expected_file": "guides/observability.md",
+          "top_files": [
+            "guides/observability.md",
+            "runbooks/disk-full.md",
+            "guides/on-call.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-oncall-days-off",
+          "kind": "question",
+          "query": "how many days off do I get for being on call?",
+          "expected_file": "guides/on-call.md",
+          "top_files": [
+            "guides/on-call.md",
+            "hr/vacation.md",
+            "hr/medical-leave.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-oncall-cant-fix",
+          "kind": "symptom",
+          "query": "I am on call and can't fix this alert, who do I ask for help?",
+          "expected_file": "guides/on-call.md",
+          "top_files": [
+            "guides/on-call.md",
+            "guides/customer-support.md",
+            "runbooks/payment-gateway.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-postmortem-deadline",
+          "kind": "question",
+          "query": "how soon after a sev 1 do we need to write the postmortem?",
+          "expected_file": "guides/postmortems.md",
+          "top_files": [
+            "guides/postmortems.md",
+            "hr/medical-leave.md",
+            "security/incidents.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-outdated-wiki-page",
+          "kind": "symptom",
+          "query": "a wiki page looks stale and wrong, who should I tell?",
+          "expected_file": "guides/wiki-conventions.md",
+          "top_files": [
+            "guides/wiki-conventions.md",
+            "security/phishing.md",
+            "runbooks/payment-gateway.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-dead-work-computer",
+          "kind": "symptom",
+          "query": "my work computer died, how long until I get another one?",
+          "expected_file": "hr/equipment.md",
+          "top_files": [
+            "hr/equipment.md",
+            "hr/onboarding.md",
+            "runbooks/refund-errors.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-client-lunch-payback",
+          "kind": "question",
+          "query": "how long until I get paid back for a client lunch?",
+          "expected_file": "hr/expenses-reimbursements.md",
+          "top_files": [
+            "hr/expenses-reimbursements.md",
+            "guides/customer-support.md",
+            "runbooks/refund-errors.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-expense-invoice",
+          "kind": "keyword",
+          "query": "expense reimbursement invoice",
+          "expected_file": "hr/expenses-reimbursements.md",
+          "top_files": [
+            "hr/expenses-reimbursements.md",
+            "runbooks/refund-errors.md",
+            "runbooks/rabbitmq-queues.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-woke-up-sick",
+          "kind": "symptom",
+          "query": "I woke up sick, who do I tell and by when?",
+          "expected_file": "hr/medical-leave.md",
+          "top_files": [
+            "hr/medical-leave.md",
+            "security/incidents.md",
+            "runbooks/high-cpu.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-doctor-note-three-days",
+          "kind": "question",
+          "query": "do I need a doctor's note for three days off?",
+          "expected_file": "hr/medical-leave.md",
+          "top_files": [
+            "hr/medical-leave.md",
+            "hr/vacation.md",
+            "hr/remote-work.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-first-week-todo",
+          "kind": "symptom",
+          "query": "it is my first week and I don't know what I have to finish",
+          "expected_file": "hr/onboarding.md",
+          "top_files": [
+            "hr/onboarding.md",
+            "hr/medical-leave.md",
+            "security/incidents.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-30-day-goals-buddy",
+          "kind": "keyword",
+          "query": "30-day goals buddy",
+          "expected_file": "hr/onboarding.md",
+          "top_files": [
+            "hr/onboarding.md",
+            "hr/remote-work.md",
+            "hr/vacation.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-raises-timing",
+          "kind": "question",
+          "query": "when are raises decided?",
+          "expected_file": "hr/performance-reviews.md",
+          "top_files": [
+            "hr/performance-reviews.md",
+            "deploys/rollback.md",
+            "hr/expenses-reimbursements.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-work-abroad",
+          "kind": "question",
+          "query": "can I work from another country for a month?",
+          "expected_file": "hr/remote-work.md",
+          "top_files": [
+            "hr/remote-work.md",
+            "hr/vacation.md",
+            "hr/medical-leave.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-home-internet-cost",
+          "kind": "symptom",
+          "query": "does the company help pay for my home internet?",
+          "expected_file": "hr/remote-work.md",
+          "top_files": [
+            "guides/customer-support.md",
+            "runbooks/payment-gateway.md",
+            "hr/expenses-reimbursements.md"
+          ],
+          "rank": null,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "question-first-year-vacation",
+          "kind": "question",
+          "query": "how many vacation days do I get in my first year?",
+          "expected_file": "hr/vacation.md",
+          "top_files": [
+            "hr/vacation.md",
+            "hr/performance-reviews.md",
+            "hr/onboarding.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-unused-days-lost",
+          "kind": "symptom",
+          "query": "I didn't use all my days last year, will I lose them?",
+          "expected_file": "hr/vacation.md",
+          "top_files": [
+            "hr/vacation.md",
+            "hr/equipment.md",
+            "hr/medical-leave.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-diskusagehigh",
+          "kind": "keyword",
+          "query": "DiskUsageHigh",
+          "expected_file": "runbooks/disk-full.md",
+          "top_files": [
+            "runbooks/disk-full.md",
+            "runbooks/log-rotation.md",
+            "runbooks/postgres-backups.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-storage-maxed-services",
+          "kind": "symptom",
+          "query": "server stopped writing files and several services are erroring, storage almost at the limit",
+          "expected_file": "runbooks/disk-full.md",
+          "top_files": [
+            "runbooks/log-rotation.md",
+            "runbooks/disk-full.md",
+            "runbooks/redis-memory.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-pods-cant-resolve",
+          "kind": "symptom",
+          "query": "pods can't look up internal service names",
+          "expected_file": "runbooks/dns.md",
+          "top_files": [
+            "runbooks/dns.md",
+            "runbooks/kubernetes-pod-restarts.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-dig-trace",
+          "kind": "keyword",
+          "query": "dig +trace",
+          "expected_file": "runbooks/dns.md",
+          "top_files": [
+            "runbooks/dns.md",
+            "guides/observability.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-py-spy",
+          "kind": "keyword",
+          "query": "py-spy dump",
+          "expected_file": "runbooks/high-cpu.md",
+          "top_files": [
+            "runbooks/high-cpu.md",
+            "runbooks/postgres-backups.md",
+            "deploys/rollback.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-servers-pegged",
+          "kind": "symptom",
+          "query": "app servers are pegged and everything is slow",
+          "expected_file": "runbooks/high-cpu.md",
+          "top_files": [
+            "runbooks/high-cpu.md",
+            "deploys/deploy-process.md",
+            "runbooks/disk-full.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-crashloopbackoff",
+          "kind": "keyword",
+          "query": "CrashLoopBackOff",
+          "expected_file": "runbooks/kubernetes-pod-restarts.md",
+          "top_files": [
+            "runbooks/kubernetes-pod-restarts.md",
+            "runbooks/postgres-backups.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-container-out-of-memory",
+          "kind": "symptom",
+          "query": "my container keeps getting killed because it runs out of memory",
+          "expected_file": "runbooks/kubernetes-pod-restarts.md",
+          "top_files": [
+            "runbooks/kubernetes-pod-restarts.md",
+            "runbooks/redis-memory.md",
+            "runbooks/log-rotation.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-logrotate-retention",
+          "kind": "keyword",
+          "query": "logrotate retention",
+          "expected_file": "runbooks/log-rotation.md",
+          "top_files": [
+            "runbooks/log-rotation.md",
+            "runbooks/disk-full.md",
+            "runbooks/kubernetes-pod-restarts.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-docker-log-size",
+          "kind": "question",
+          "query": "how big can docker container logs get before they rotate?",
+          "expected_file": "runbooks/log-rotation.md",
+          "top_files": [
+            "runbooks/log-rotation.md",
+            "runbooks/kubernetes-pod-restarts.md",
+            "runbooks/disk-full.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-big-upload-rejected",
+          "kind": "symptom",
+          "query": "users can't upload a 30 MB document, it gets rejected",
+          "expected_file": "runbooks/nginx.md",
+          "top_files": [
+            "runbooks/nginx.md",
+            "runbooks/redis-memory.md",
+            "hr/expenses-reimbursements.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-proxy-config-live",
+          "kind": "symptom",
+          "query": "I changed a proxy config and need it live without kicking users off",
+          "expected_file": "runbooks/nginx.md",
+          "top_files": [
+            "deploys/rollback.md",
+            "runbooks/log-rotation.md",
+            "runbooks/nginx.md"
+          ],
+          "rank": 3,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-err-4021",
+          "kind": "keyword",
+          "query": "ERR_4021",
+          "expected_file": "runbooks/payment-gateway.md",
+          "top_files": [
+            "runbooks/payment-gateway.md",
+            "auth/oauth-google.md",
+            "security/phishing.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-gateway-timeout-retry",
+          "kind": "question",
+          "query": "should I retry a charge automatically if the gateway does not answer?",
+          "expected_file": "runbooks/payment-gateway.md",
+          "top_files": [
+            "runbooks/payment-gateway.md",
+            "runbooks/refund-errors.md",
+            "runbooks/subscription-billing.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-restore-duration",
+          "kind": "question",
+          "query": "how long did the last full database restore take?",
+          "expected_file": "runbooks/postgres-backups.md",
+          "top_files": [
+            "runbooks/postgres-backups.md",
+            "deploys/rollback.md",
+            "hr/equipment.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-backup-crashed",
+          "kind": "symptom",
+          "query": "last night's database backup crashed, where do I look?",
+          "expected_file": "runbooks/postgres-backups.md",
+          "top_files": [
+            "runbooks/postgres-backups.md",
+            "deploys/deploy-process.md",
+            "runbooks/kubernetes-pod-restarts.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-idle-in-transaction",
+          "kind": "keyword",
+          "query": "idle in transaction",
+          "expected_file": "runbooks/postgres-connections.md",
+          "top_files": [
+            "runbooks/postgres-connections.md",
+            "runbooks/tls-certificates.md",
+            "deploys/rollback.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-too-many-clients",
+          "kind": "symptom",
+          "query": "database says too many clients and the app can't connect",
+          "expected_file": "runbooks/postgres-connections.md",
+          "top_files": [
+            "runbooks/postgres-connections.md",
+            "runbooks/redis-memory.md",
+            "runbooks/rabbitmq-queues.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-invoice-emails-late",
+          "kind": "symptom",
+          "query": "invoice emails are arriving hours late",
+          "expected_file": "runbooks/rabbitmq-queues.md",
+          "top_files": [
+            "runbooks/rabbitmq-queues.md",
+            "hr/expenses-reimbursements.md",
+            "runbooks/subscription-billing.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-invoices-dlq",
+          "kind": "keyword",
+          "query": "invoices.dlq",
+          "expected_file": "runbooks/rabbitmq-queues.md",
+          "top_files": [
+            "runbooks/rabbitmq-queues.md",
+            "hr/expenses-reimbursements.md",
+            "guides/glossary.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-flushall",
+          "kind": "keyword",
+          "query": "FLUSHALL production",
+          "expected_file": "runbooks/redis-memory.md",
+          "top_files": [
+            "runbooks/redis-memory.md",
+            "deploys/deploy-process.md",
+            "deploys/ci-pipeline.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-sessions-closing-writes-rejected",
+          "kind": "symptom",
+          "query": "user sessions keep getting closed and the cache rejects writes",
+          "expected_file": "runbooks/redis-memory.md",
+          "top_files": [
+            "runbooks/redis-memory.md",
+            "runbooks/postgres-connections.md",
+            "runbooks/kubernetes-pod-restarts.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-refund-eight-months",
+          "kind": "question",
+          "query": "a customer asks for a refund after eight months, what do we do?",
+          "expected_file": "runbooks/refund-errors.md",
+          "top_files": [
+            "runbooks/refund-errors.md",
+            "deploys/rollback.md",
+            "guides/customer-support.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-err-4201",
+          "kind": "keyword",
+          "query": "ERR_4201",
+          "expected_file": "runbooks/refund-errors.md",
+          "top_files": [
+            "runbooks/disk-full.md",
+            "auth/oauth-google.md",
+            "security/phishing.md"
+          ],
+          "rank": null,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "keyword-err-4210",
+          "kind": "keyword",
+          "query": "ERR_4210",
+          "expected_file": "runbooks/subscription-billing.md",
+          "top_files": [
+            "runbooks/disk-full.md",
+            "security/phishing.md",
+            "runbooks/postgres-connections.md"
+          ],
+          "rank": null,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "symptom-plan-renewals-failing",
+          "kind": "symptom",
+          "query": "renewals fail for every customer on one plan",
+          "expected_file": "runbooks/subscription-billing.md",
+          "top_files": [
+            "runbooks/subscription-billing.md",
+            "runbooks/payment-gateway.md",
+            "deploys/rollback.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-not-secure-warning",
+          "kind": "symptom",
+          "query": "browser shows a not secure warning on our site",
+          "expected_file": "runbooks/tls-certificates.md",
+          "top_files": [
+            "runbooks/tls-certificates.md",
+            "security/phishing.md",
+            "runbooks/payment-gateway.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-certbot-force",
+          "kind": "keyword",
+          "query": "certbot force-renewal",
+          "expected_file": "runbooks/tls-certificates.md",
+          "top_files": [
+            "runbooks/tls-certificates.md",
+            "runbooks/nginx.md",
+            "auth/api-keys.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-customer-data-leak-notify",
+          "kind": "question",
+          "query": "who do we notify and when after a customer data leak?",
+          "expected_file": "security/incidents.md",
+          "top_files": [
+            "security/incidents.md",
+            "runbooks/payment-gateway.md",
+            "guides/customer-support.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-send-password-email",
+          "kind": "question",
+          "query": "am I allowed to email a password to a coworker?",
+          "expected_file": "security/password-policy.md",
+          "top_files": [
+            "security/password-policy.md",
+            "hr/onboarding.md",
+            "auth/password-recovery.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-clicked-weird-link",
+          "kind": "symptom",
+          "query": "I clicked a weird link in an email, what do I do?",
+          "expected_file": "security/phishing.md",
+          "top_files": [
+            "security/phishing.md",
+            "security/incidents.md",
+            "auth/oauth-google.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-report-phishing",
+          "kind": "keyword",
+          "query": "report suspicious email",
+          "expected_file": "security/phishing.md",
+          "top_files": [
+            "security/phishing.md",
+            "security/incidents.md",
+            "runbooks/disk-full.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-vpn-no-internal-names",
+          "kind": "symptom",
+          "query": "vpn connects but I can't reach internal hostnames",
+          "expected_file": "security/vpn.md",
+          "top_files": [
+            "security/vpn.md",
+            "runbooks/dns.md",
+            "auth/oauth-google.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-vpn-ticket-info",
+          "kind": "question",
+          "query": "what should I include in a ticket when the VPN client fails?",
+          "expected_file": "security/vpn.md",
+          "top_files": [
+            "security/vpn.md",
+            "guides/customer-support.md",
+            "hr/onboarding.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        }
+      ]
+    },
+    "hybrid": {
+      "recall@1": 0.85,
+      "recall@3": 0.9625,
+      "mrr": 0.9066666666666666,
+      "hits@1": 68,
+      "hits@3": 77,
+      "recall@3_ci95": [
+        0.9125,
+        1.0
+      ],
+      "queries": [
+        {
+          "id": "symptom-pushed-secret",
+          "kind": "symptom",
+          "query": "I accidentally committed a service credential to a repo, what now?",
+          "expected_file": "auth/api-keys.md",
+          "top_files": [
+            "auth/api-keys.md",
+            "auth/password-recovery.md",
+            "security/password-policy.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-github-token-expiry",
+          "kind": "keyword",
+          "query": "github personal token expiration",
+          "expected_file": "auth/api-keys.md",
+          "top_files": [
+            "auth/api-keys.md",
+            "auth/jwt.md",
+            "runbooks/payment-gateway.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-kicked-out-minutes",
+          "kind": "symptom",
+          "query": "users get kicked out after a few minutes and the API says unauthorized",
+          "expected_file": "auth/jwt.md",
+          "top_files": [
+            "auth/jwt.md",
+            "auth/password-recovery.md",
+            "runbooks/payment-gateway.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-auth-refresh",
+          "kind": "keyword",
+          "query": "POST /auth/refresh",
+          "expected_file": "auth/jwt.md",
+          "top_files": [
+            "auth/jwt.md",
+            "auth/key-rotation.md",
+            "auth/password-recovery.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-jwks",
+          "kind": "keyword",
+          "query": "JWKS",
+          "expected_file": "auth/key-rotation.md",
+          "top_files": [
+            "auth/key-rotation.md",
+            "auth/jwt.md",
+            "runbooks/log-rotation.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-leaked-private-key",
+          "kind": "question",
+          "query": "what do we do if a signing private key leaks?",
+          "expected_file": "auth/key-rotation.md",
+          "top_files": [
+            "auth/key-rotation.md",
+            "security/phishing.md",
+            "security/incidents.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-new-phone-codes",
+          "kind": "symptom",
+          "query": "got a new phone and can't get my login codes",
+          "expected_file": "auth/mfa.md",
+          "top_files": [
+            "auth/mfa.md",
+            "auth/password-recovery.md",
+            "runbooks/kubernetes-pod-restarts.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-sms-second-factor",
+          "kind": "question",
+          "query": "can I use text messages as my second factor?",
+          "expected_file": "auth/mfa.md",
+          "top_files": [
+            "auth/mfa.md",
+            "hr/onboarding.md",
+            "runbooks/tls-certificates.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-redirect-uri-mismatch",
+          "kind": "keyword",
+          "query": "redirect_uri_mismatch",
+          "expected_file": "auth/oauth-google.md",
+          "top_files": [
+            "auth/oauth-google.md",
+            "runbooks/payment-gateway.md",
+            "auth/jwt.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-google-login-url-rejected",
+          "kind": "symptom",
+          "query": "google login for an internal app says my app address isn't allowed",
+          "expected_file": "auth/oauth-google.md",
+          "top_files": [
+            "auth/oauth-google.md",
+            "runbooks/redis-memory.md",
+            "security/vpn.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-too-many-wrong-passwords",
+          "kind": "symptom",
+          "query": "I typed my password wrong too many times and now I can't try again",
+          "expected_file": "auth/password-recovery.md",
+          "top_files": [
+            "auth/password-recovery.md",
+            "security/password-policy.md",
+            "auth/jwt.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-reset-link-validity",
+          "kind": "question",
+          "query": "how long does the password reset link last?",
+          "expected_file": "auth/password-recovery.md",
+          "top_files": [
+            "auth/password-recovery.md",
+            "runbooks/postgres-backups.md",
+            "security/password-policy.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-temporary-admin",
+          "kind": "question",
+          "query": "how do I get temporary admin access for a one-off task?",
+          "expected_file": "auth/rbac-roles.md",
+          "top_files": [
+            "auth/rbac-roles.md",
+            "hr/onboarding.md",
+            "auth/oauth-google.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-need-more-access",
+          "kind": "symptom",
+          "query": "I need to change settings in a service but I only have read access, how do I get more?",
+          "expected_file": "auth/rbac-roles.md",
+          "top_files": [
+            "auth/rbac-roles.md",
+            "hr/onboarding.md",
+            "runbooks/nginx.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-random-test-failures",
+          "kind": "symptom",
+          "query": "one test fails randomly every few runs and nobody knows why",
+          "expected_file": "deploys/ci-pipeline.md",
+          "top_files": [
+            "deploys/ci-pipeline.md",
+            "runbooks/rabbitmq-queues.md",
+            "runbooks/payment-gateway.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-merge-to-production",
+          "kind": "question",
+          "query": "how does a change get to production after it is merged?",
+          "expected_file": "deploys/deploy-process.md",
+          "top_files": [
+            "deploys/deploy-process.md",
+            "runbooks/dns.md",
+            "deploys/rollback.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-progressive-rollout",
+          "kind": "keyword",
+          "query": "progressive rollout 5% 25% 100%",
+          "expected_file": "deploys/deploy-process.md",
+          "top_files": [
+            "deploys/deploy-process.md",
+            "hr/medical-leave.md",
+            "deploys/feature-flags.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-ship-hidden-work",
+          "kind": "symptom",
+          "query": "how do we ship unfinished work without users seeing it?",
+          "expected_file": "deploys/feature-flags.md",
+          "top_files": [
+            "deploys/rollback.md",
+            "security/phishing.md",
+            "hr/remote-work.md"
+          ],
+          "rank": null,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "question-friday-deploy",
+          "kind": "question",
+          "query": "can I push to production on a Friday evening?",
+          "expected_file": "deploys/freeze-windows.md",
+          "top_files": [
+            "hr/onboarding.md",
+            "deploys/freeze-windows.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-december-close",
+          "kind": "keyword",
+          "query": "December accounting close",
+          "expected_file": "deploys/freeze-windows.md",
+          "top_files": [
+            "deploys/freeze-windows.md",
+            "hr/performance-reviews.md",
+            "guides/customer-support.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-bad-release-payments",
+          "kind": "symptom",
+          "query": "I released a bad version and checkout stopped working, how do I go back?",
+          "expected_file": "deploys/rollback.md",
+          "top_files": [
+            "deploys/rollback.md",
+            "runbooks/refund-errors.md",
+            "runbooks/payment-gateway.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-revert-migrations",
+          "kind": "keyword",
+          "query": "rollback database migrations",
+          "expected_file": "deploys/rollback.md",
+          "top_files": [
+            "deploys/rollback.md",
+            "runbooks/postgres-backups.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-bump-major-version",
+          "kind": "question",
+          "query": "when do I bump the major version number?",
+          "expected_file": "deploys/versioning.md",
+          "top_files": [
+            "deploys/versioning.md",
+            "deploys/rollback.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-ruff-prettier",
+          "kind": "keyword",
+          "query": "ruff prettier formatter",
+          "expected_file": "guides/code-style.md",
+          "top_files": [
+            "guides/code-style.md",
+            "runbooks/disk-full.md",
+            "runbooks/redis-memory.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-premium-first-response",
+          "kind": "question",
+          "query": "how fast must we first reply to premium customers?",
+          "expected_file": "guides/customer-support.md",
+          "top_files": [
+            "guides/customer-support.md",
+            "runbooks/rabbitmq-queues.md",
+            "hr/vacation.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-wal-meaning",
+          "kind": "question",
+          "query": "what does WAL stand for?",
+          "expected_file": "guides/glossary.md",
+          "top_files": [
+            "guides/glossary.md",
+            "runbooks/postgres-backups.md",
+            "auth/oauth-google.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-rpo-rto",
+          "kind": "keyword",
+          "query": "RPO RTO definition",
+          "expected_file": "guides/glossary.md",
+          "top_files": [
+            "guides/glossary.md",
+            "deploys/deploy-process.md",
+            "runbooks/log-rotation.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-meeting-no-agenda",
+          "kind": "question",
+          "query": "what happens if a meeting has no agenda?",
+          "expected_file": "guides/meetings.md",
+          "top_files": [
+            "guides/meetings.md",
+            "guides/postmortems.md",
+            "guides/on-call.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-request-id-tracing",
+          "kind": "keyword",
+          "query": "request_id trace across services",
+          "expected_file": "guides/observability.md",
+          "top_files": [
+            "guides/observability.md",
+            "security/phishing.md",
+            "runbooks/dns.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-four-minimum-signals",
+          "kind": "question",
+          "query": "what are the minimum signals every service should expose?",
+          "expected_file": "guides/observability.md",
+          "top_files": [
+            "guides/observability.md",
+            "runbooks/disk-full.md",
+            "security/password-policy.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-oncall-days-off",
+          "kind": "question",
+          "query": "how many days off do I get for being on call?",
+          "expected_file": "guides/on-call.md",
+          "top_files": [
+            "guides/on-call.md",
+            "hr/vacation.md",
+            "hr/remote-work.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-oncall-cant-fix",
+          "kind": "symptom",
+          "query": "I am on call and can't fix this alert, who do I ask for help?",
+          "expected_file": "guides/on-call.md",
+          "top_files": [
+            "guides/on-call.md",
+            "guides/observability.md",
+            "runbooks/disk-full.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-postmortem-deadline",
+          "kind": "question",
+          "query": "how soon after a sev 1 do we need to write the postmortem?",
+          "expected_file": "guides/postmortems.md",
+          "top_files": [
+            "guides/postmortems.md",
+            "deploys/rollback.md",
+            "hr/medical-leave.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-outdated-wiki-page",
+          "kind": "symptom",
+          "query": "a wiki page looks stale and wrong, who should I tell?",
+          "expected_file": "guides/wiki-conventions.md",
+          "top_files": [
+            "guides/wiki-conventions.md",
+            "security/phishing.md",
+            "guides/meetings.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-dead-work-computer",
+          "kind": "symptom",
+          "query": "my work computer died, how long until I get another one?",
+          "expected_file": "hr/equipment.md",
+          "top_files": [
+            "runbooks/postgres-backups.md",
+            "hr/onboarding.md",
+            "hr/remote-work.md"
+          ],
+          "rank": 5,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "question-client-lunch-payback",
+          "kind": "question",
+          "query": "how long until I get paid back for a client lunch?",
+          "expected_file": "hr/expenses-reimbursements.md",
+          "top_files": [
+            "hr/medical-leave.md",
+            "hr/vacation.md",
+            "deploys/rollback.md"
+          ],
+          "rank": 6,
+          "hit@1": false,
+          "hit@3": false
+        },
+        {
+          "id": "keyword-expense-invoice",
+          "kind": "keyword",
+          "query": "expense reimbursement invoice",
+          "expected_file": "hr/expenses-reimbursements.md",
+          "top_files": [
+            "hr/expenses-reimbursements.md",
+            "runbooks/rabbitmq-queues.md",
+            "runbooks/refund-errors.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-woke-up-sick",
+          "kind": "symptom",
+          "query": "I woke up sick, who do I tell and by when?",
+          "expected_file": "hr/medical-leave.md",
+          "top_files": [
+            "hr/medical-leave.md",
+            "security/incidents.md",
+            "hr/performance-reviews.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-doctor-note-three-days",
+          "kind": "question",
+          "query": "do I need a doctor's note for three days off?",
+          "expected_file": "hr/medical-leave.md",
+          "top_files": [
+            "hr/medical-leave.md",
+            "hr/remote-work.md",
+            "guides/on-call.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-first-week-todo",
+          "kind": "symptom",
+          "query": "it is my first week and I don't know what I have to finish",
+          "expected_file": "hr/onboarding.md",
+          "top_files": [
+            "hr/onboarding.md",
+            "deploys/ci-pipeline.md",
+            "security/incidents.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-30-day-goals-buddy",
+          "kind": "keyword",
+          "query": "30-day goals buddy",
+          "expected_file": "hr/onboarding.md",
+          "top_files": [
+            "hr/onboarding.md",
+            "hr/remote-work.md",
+            "runbooks/log-rotation.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-raises-timing",
+          "kind": "question",
+          "query": "when are raises decided?",
+          "expected_file": "hr/performance-reviews.md",
+          "top_files": [
+            "hr/performance-reviews.md",
+            "deploys/rollback.md",
+            "hr/expenses-reimbursements.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-work-abroad",
+          "kind": "question",
+          "query": "can I work from another country for a month?",
+          "expected_file": "hr/remote-work.md",
+          "top_files": [
+            "hr/remote-work.md",
+            "hr/onboarding.md",
+            "hr/vacation.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-home-internet-cost",
+          "kind": "symptom",
+          "query": "does the company help pay for my home internet?",
+          "expected_file": "hr/remote-work.md",
+          "top_files": [
+            "hr/expenses-reimbursements.md",
+            "runbooks/payment-gateway.md",
+            "hr/remote-work.md"
+          ],
+          "rank": 3,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "question-first-year-vacation",
+          "kind": "question",
+          "query": "how many vacation days do I get in my first year?",
+          "expected_file": "hr/vacation.md",
+          "top_files": [
+            "hr/vacation.md",
+            "hr/medical-leave.md",
+            "hr/performance-reviews.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-unused-days-lost",
+          "kind": "symptom",
+          "query": "I didn't use all my days last year, will I lose them?",
+          "expected_file": "hr/vacation.md",
+          "top_files": [
+            "hr/equipment.md",
+            "hr/vacation.md",
+            "auth/mfa.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-diskusagehigh",
+          "kind": "keyword",
+          "query": "DiskUsageHigh",
+          "expected_file": "runbooks/disk-full.md",
+          "top_files": [
+            "runbooks/disk-full.md",
+            "runbooks/log-rotation.md",
+            "runbooks/postgres-backups.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-storage-maxed-services",
+          "kind": "symptom",
+          "query": "server stopped writing files and several services are erroring, storage almost at the limit",
+          "expected_file": "runbooks/disk-full.md",
+          "top_files": [
+            "runbooks/log-rotation.md",
+            "runbooks/disk-full.md",
+            "runbooks/nginx.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-pods-cant-resolve",
+          "kind": "symptom",
+          "query": "pods can't look up internal service names",
+          "expected_file": "runbooks/dns.md",
+          "top_files": [
+            "runbooks/dns.md",
+            "runbooks/kubernetes-pod-restarts.md",
+            "auth/oauth-google.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-dig-trace",
+          "kind": "keyword",
+          "query": "dig +trace",
+          "expected_file": "runbooks/dns.md",
+          "top_files": [
+            "runbooks/dns.md",
+            "guides/observability.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-py-spy",
+          "kind": "keyword",
+          "query": "py-spy dump",
+          "expected_file": "runbooks/high-cpu.md",
+          "top_files": [
+            "runbooks/high-cpu.md",
+            "runbooks/postgres-backups.md",
+            "deploys/rollback.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-servers-pegged",
+          "kind": "symptom",
+          "query": "app servers are pegged and everything is slow",
+          "expected_file": "runbooks/high-cpu.md",
+          "top_files": [
+            "runbooks/high-cpu.md",
+            "runbooks/nginx.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-crashloopbackoff",
+          "kind": "keyword",
+          "query": "CrashLoopBackOff",
+          "expected_file": "runbooks/kubernetes-pod-restarts.md",
+          "top_files": [
+            "runbooks/kubernetes-pod-restarts.md",
+            "runbooks/postgres-backups.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-container-out-of-memory",
+          "kind": "symptom",
+          "query": "my container keeps getting killed because it runs out of memory",
+          "expected_file": "runbooks/kubernetes-pod-restarts.md",
+          "top_files": [
+            "runbooks/redis-memory.md",
+            "runbooks/kubernetes-pod-restarts.md",
+            "runbooks/log-rotation.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-logrotate-retention",
+          "kind": "keyword",
+          "query": "logrotate retention",
+          "expected_file": "runbooks/log-rotation.md",
+          "top_files": [
+            "runbooks/log-rotation.md",
+            "runbooks/disk-full.md",
+            "runbooks/kubernetes-pod-restarts.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-docker-log-size",
+          "kind": "question",
+          "query": "how big can docker container logs get before they rotate?",
+          "expected_file": "runbooks/log-rotation.md",
+          "top_files": [
+            "runbooks/log-rotation.md",
+            "runbooks/disk-full.md",
+            "runbooks/kubernetes-pod-restarts.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-big-upload-rejected",
+          "kind": "symptom",
+          "query": "users can't upload a 30 MB document, it gets rejected",
+          "expected_file": "runbooks/nginx.md",
+          "top_files": [
+            "runbooks/nginx.md",
+            "hr/expenses-reimbursements.md",
+            "deploys/deploy-process.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-proxy-config-live",
+          "kind": "symptom",
+          "query": "I changed a proxy config and need it live without kicking users off",
+          "expected_file": "runbooks/nginx.md",
+          "top_files": [
+            "auth/rbac-roles.md",
+            "runbooks/nginx.md",
+            "deploys/rollback.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-err-4021",
+          "kind": "keyword",
+          "query": "ERR_4021",
+          "expected_file": "runbooks/payment-gateway.md",
+          "top_files": [
+            "runbooks/payment-gateway.md",
+            "runbooks/refund-errors.md",
+            "auth/oauth-google.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-gateway-timeout-retry",
+          "kind": "question",
+          "query": "should I retry a charge automatically if the gateway does not answer?",
+          "expected_file": "runbooks/payment-gateway.md",
+          "top_files": [
+            "runbooks/payment-gateway.md",
+            "runbooks/refund-errors.md",
+            "runbooks/subscription-billing.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-restore-duration",
+          "kind": "question",
+          "query": "how long did the last full database restore take?",
+          "expected_file": "runbooks/postgres-backups.md",
+          "top_files": [
+            "runbooks/postgres-backups.md",
+            "deploys/rollback.md",
+            "runbooks/disk-full.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-backup-crashed",
+          "kind": "symptom",
+          "query": "last night's database backup crashed, where do I look?",
+          "expected_file": "runbooks/postgres-backups.md",
+          "top_files": [
+            "runbooks/postgres-backups.md",
+            "deploys/rollback.md",
+            "runbooks/redis-memory.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-idle-in-transaction",
+          "kind": "keyword",
+          "query": "idle in transaction",
+          "expected_file": "runbooks/postgres-connections.md",
+          "top_files": [
+            "runbooks/postgres-connections.md",
+            "runbooks/tls-certificates.md",
+            "deploys/rollback.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-too-many-clients",
+          "kind": "symptom",
+          "query": "database says too many clients and the app can't connect",
+          "expected_file": "runbooks/postgres-connections.md",
+          "top_files": [
+            "runbooks/postgres-connections.md",
+            "security/vpn.md",
+            "runbooks/rabbitmq-queues.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-invoice-emails-late",
+          "kind": "symptom",
+          "query": "invoice emails are arriving hours late",
+          "expected_file": "runbooks/rabbitmq-queues.md",
+          "top_files": [
+            "runbooks/rabbitmq-queues.md",
+            "hr/expenses-reimbursements.md",
+            "guides/customer-support.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-invoices-dlq",
+          "kind": "keyword",
+          "query": "invoices.dlq",
+          "expected_file": "runbooks/rabbitmq-queues.md",
+          "top_files": [
+            "runbooks/rabbitmq-queues.md",
+            "hr/expenses-reimbursements.md",
+            "guides/glossary.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-flushall",
+          "kind": "keyword",
+          "query": "FLUSHALL production",
+          "expected_file": "runbooks/redis-memory.md",
+          "top_files": [
+            "runbooks/redis-memory.md",
+            "deploys/deploy-process.md",
+            "runbooks/rabbitmq-queues.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-sessions-closing-writes-rejected",
+          "kind": "symptom",
+          "query": "user sessions keep getting closed and the cache rejects writes",
+          "expected_file": "runbooks/redis-memory.md",
+          "top_files": [
+            "runbooks/redis-memory.md",
+            "runbooks/kubernetes-pod-restarts.md",
+            "deploys/ci-pipeline.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-refund-eight-months",
+          "kind": "question",
+          "query": "a customer asks for a refund after eight months, what do we do?",
+          "expected_file": "runbooks/refund-errors.md",
+          "top_files": [
+            "runbooks/refund-errors.md",
+            "deploys/rollback.md",
+            "runbooks/subscription-billing.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-err-4201",
+          "kind": "keyword",
+          "query": "ERR_4201",
+          "expected_file": "runbooks/refund-errors.md",
+          "top_files": [
+            "runbooks/payment-gateway.md",
+            "runbooks/refund-errors.md",
+            "runbooks/disk-full.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-err-4210",
+          "kind": "keyword",
+          "query": "ERR_4210",
+          "expected_file": "runbooks/subscription-billing.md",
+          "top_files": [
+            "runbooks/payment-gateway.md",
+            "runbooks/refund-errors.md",
+            "runbooks/subscription-billing.md"
+          ],
+          "rank": 3,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-plan-renewals-failing",
+          "kind": "symptom",
+          "query": "renewals fail for every customer on one plan",
+          "expected_file": "runbooks/subscription-billing.md",
+          "top_files": [
+            "runbooks/subscription-billing.md",
+            "guides/customer-support.md",
+            "runbooks/payment-gateway.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-not-secure-warning",
+          "kind": "symptom",
+          "query": "browser shows a not secure warning on our site",
+          "expected_file": "runbooks/tls-certificates.md",
+          "top_files": [
+            "runbooks/tls-certificates.md",
+            "runbooks/nginx.md",
+            "runbooks/payment-gateway.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-certbot-force",
+          "kind": "keyword",
+          "query": "certbot force-renewal",
+          "expected_file": "runbooks/tls-certificates.md",
+          "top_files": [
+            "runbooks/tls-certificates.md",
+            "auth/jwt.md",
+            "runbooks/subscription-billing.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-customer-data-leak-notify",
+          "kind": "question",
+          "query": "who do we notify and when after a customer data leak?",
+          "expected_file": "security/incidents.md",
+          "top_files": [
+            "guides/customer-support.md",
+            "security/incidents.md",
+            "security/phishing.md"
+          ],
+          "rank": 2,
+          "hit@1": false,
+          "hit@3": true
+        },
+        {
+          "id": "question-send-password-email",
+          "kind": "question",
+          "query": "am I allowed to email a password to a coworker?",
+          "expected_file": "security/password-policy.md",
+          "top_files": [
+            "security/password-policy.md",
+            "auth/password-recovery.md",
+            "hr/onboarding.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-clicked-weird-link",
+          "kind": "symptom",
+          "query": "I clicked a weird link in an email, what do I do?",
+          "expected_file": "security/phishing.md",
+          "top_files": [
+            "security/phishing.md",
+            "security/incidents.md",
+            "auth/password-recovery.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "keyword-report-phishing",
+          "kind": "keyword",
+          "query": "report suspicious email",
+          "expected_file": "security/phishing.md",
+          "top_files": [
+            "security/phishing.md",
+            "security/password-policy.md",
+            "hr/onboarding.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "symptom-vpn-no-internal-names",
+          "kind": "symptom",
+          "query": "vpn connects but I can't reach internal hostnames",
+          "expected_file": "security/vpn.md",
+          "top_files": [
+            "security/vpn.md",
+            "runbooks/dns.md",
+            "hr/onboarding.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        },
+        {
+          "id": "question-vpn-ticket-info",
+          "kind": "question",
+          "query": "what should I include in a ticket when the VPN client fails?",
+          "expected_file": "security/vpn.md",
+          "top_files": [
+            "security/vpn.md",
+            "deploys/ci-pipeline.md",
+            "guides/customer-support.md"
+          ],
+          "rank": 1,
+          "hit@1": true,
+          "hit@3": true
+        }
+      ]
+    }
+  }
+}
