@@ -8,7 +8,10 @@ CHUNKS_FILE = "chunks.json"
 VECTORS_FILE = "vectors.npy"
 
 EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
+E5_MODEL = "intfloat/e5-small-v2"
 QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
+E5_QUERY_PREFIX = "query: "
+E5_PASSAGE_PREFIX = "passage: "
 EMBEDDING_BATCH_SIZE = 32
 ENCODER_THREADS = 2
 

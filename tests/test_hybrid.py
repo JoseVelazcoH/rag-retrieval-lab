@@ -24,3 +24,18 @@ def test_fuse_rankings_rewards_agreement_over_single_first_place():
 
 def test_fuse_rankings_with_no_rankings_is_empty():
     assert fuse_rankings({}) == []
+
+
+def test_weights_scale_each_method_contribution():
+    hits = fuse_rankings({"bm25": [1], "vector": [2]}, {"bm25": 0.3, "vector": 0.7})
+    assert [h.chunk_id for h in hits] == [2, 1]
+    assert hits[0].score == pytest.approx(0.7 / (RRF_K + 1))
+
+
+def test_vector_heavy_weights_let_vector_order_win_a_tie():
+    rankings = {"bm25": [1, 2], "vector": [2, 1]}
+    assert fuse_rankings(rankings, {"bm25": 0.3, "vector": 0.7})[0].chunk_id == 2
+
+
+def test_missing_weight_defaults_to_one():
+    assert fuse_rankings({"bm25": [5]}, {"vector": 0.7})[0].score == pytest.approx(1 / (RRF_K + 1))
