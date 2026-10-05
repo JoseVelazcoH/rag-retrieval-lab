@@ -1,0 +1,17 @@
+[
+  {"id": "exact-err-code", "kind": "exact", "query": "ERR_4021", "expected_file": "runbooks/payment-gateway.md", "expected_line": 7},
+  {"id": "exact-err-refund", "kind": "exact", "query": "ERR_4012", "expected_file": "runbooks/refund-errors.md", "expected_line": 7},
+  {"id": "exact-err-renewal", "kind": "exact", "query": "ERR_4210", "expected_file": "runbooks/subscription-billing.md", "expected_line": 6},
+  {"id": "exact-err-plan", "kind": "exact", "query": "ERR_4102", "expected_file": "runbooks/subscription-billing.md", "expected_line": 13},
+  {"id": "exact-nginx-config", "kind": "exact", "query": "client_max_body_size", "expected_file": "runbooks/nginx.md", "expected_line": 25},
+  {"id": "exact-k8s-status", "kind": "exact", "query": "CrashLoopBackOff", "expected_file": "runbooks/kubernetes-pod-restarts.md", "expected_line": 3},
+  {"id": "exact-pgbackrest", "kind": "exact", "query": "pgbackrest restore", "expected_file": "runbooks/postgres-backups.md", "expected_line": 15},
+  {"id": "exact-oauth-error", "kind": "exact", "query": "redirect_uri_mismatch", "expected_file": "auth/oauth-google.md", "expected_line": 14},
+  {"id": "exact-certbot", "kind": "exact", "query": "certbot renew --force-renewal", "expected_file": "runbooks/tls-certificates.md", "expected_line": 8},
+  {"id": "para-slow-crash", "kind": "paraphrase", "query": "the page takes forever and then crashes", "expected_file": "runbooks/nginx.md", "expected_line": 39},
+  {"id": "para-new-phone", "kind": "paraphrase", "query": "my phone was replaced and I cannot approve logins", "expected_file": "auth/mfa.md", "expected_line": 9},
+  {"id": "para-stuck-jobs", "kind": "paraphrase", "query": "background jobs are stuck and workers are not picking them up", "expected_file": "runbooks/rabbitmq-queues.md", "expected_line": 8},
+  {"id": "para-kicked-out", "kind": "paraphrase", "query": "kicked out after a quarter of an hour because my credential lapsed", "expected_file": "auth/jwt.md", "expected_line": 9},
+  {"id": "para-suspicious-mail", "kind": "paraphrase", "query": "a stranger emailed asking for my login details", "expected_file": "security/phishing.md", "expected_line": 3},
+  {"id": "para-bad-release", "kind": "paraphrase", "query": "going back to the previous build after a bad launch", "expected_file": "deploys/rollback.md", "expected_line": 9}
+]
